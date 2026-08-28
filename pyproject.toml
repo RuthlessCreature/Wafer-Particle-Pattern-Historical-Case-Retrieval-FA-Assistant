@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wafer-particle-fa-assistant"
+version = "0.1.0"
+description = "Offline wafer particle pattern historical case retrieval and FA assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26,<3",
+  "opencv-python>=4.9,<5",
+  "Pillow>=10,<12",
+]
+
+[project.scripts]
+wafer-fa = "wafer_fa.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
